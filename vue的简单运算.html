@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    {{number/10}}
+    {{isOk ? '确认':'取消'}}
+    {{text.split(',').reverse().join(',')}}
+</div>
+<script>
+    var app=new Vue({
+        el:'#app',
+        data:{
+            number:100,
+            isOk:true,
+            text:'123,456'
+        }
+    })
+</script>
+</body>
+</html>

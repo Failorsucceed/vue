@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="name" placeholder="你的名字" >
+    <h1>hi,{{name}}</h1>
+</div>
+<script>
+var app=new Vue({
+    el:"#app",   //用于指定一个页面中存在的DOM元素来挂载VUE
+    data:{
+        name:""
+    }
+})
+</script>
+</body>
+</html>

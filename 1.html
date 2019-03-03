@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for用法</title>
+    <style>
+        *{
+            list-style: none;
+        }
+    </style>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="book in books">{{book.name}} is {{book.A}}</li>
+            <!--&lt;!&ndash;v-for循环一个简单的数组&ndash;&gt;-->
+            <!--<p v-for="item in list">{{item}}</p>-->
+            <!--<P v-for="(item ,i) in list">索引值：{{i}}-&#45;&#45;每一项：{{item}}</P>-->
+            <!--&lt;!&ndash;v-for循环一个复杂的数组&ndash;&gt;-->
+            <!--<p v-for="(item,i) in list1">索引值：{{i}}&#45;&#45;id：{{item.userid}}-&#45;&#45;姓名：{{item.username}}</p>-->
+            <!--&lt;!&ndash;v-for循环一个对象&ndash;&gt;-->
+            <!--<p v-for="(val,key,i) in list2">id：{{val}},name:{{key}},index:{{i}}</p>-->
+            <!--&lt;!&ndash;v-for 循环一个迭代数字&ndash;&gt;-->
+            <!--<p v-for="count in 10">这是第{{count}}次循环</p>-->
+
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                books:[
+                {name:'《Vue.js》',A:'cool'},
+                {name:'《Javascript语言精华》',A:'good'},
+                {name:'《SQL》',A:'glod'}
+            ]
+            }
+        })
+    </script>
+</body>
+</html>
